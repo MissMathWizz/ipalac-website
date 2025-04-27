@@ -1,10 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Menu } from "lucide-react"
+import { Menu } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import TariffCalculator from "@/components/tariff-calculator"
+import TariffCalculator from "@/components/tariff-calculator-es"
 
 export default function HomePageES() {
   return (
@@ -27,6 +27,9 @@ export default function HomePageES() {
             </SheetTrigger>
             <SheetContent side="right">
               <nav className="flex flex-col gap-4 mt-10">
+                <Link href="/es" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
+                  Inicio
+                </Link>
                 <Link href="/es/team" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Equipo
                 </Link>
@@ -43,6 +46,9 @@ export default function HomePageES() {
             </SheetContent>
           </Sheet>
           <nav className="hidden md:flex items-center gap-8">
+            <Link href="/es" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
+              Inicio
+            </Link>
             <Link href="/es/team" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Equipo
             </Link>
@@ -107,9 +113,6 @@ export default function HomePageES() {
                 internacional entre Asia y América Latina, aprovechando sus fortalezas complementarias para abordar
                 desafíos globales y desbloquear nuevas oportunidades.
               </p>
-              <Button className="bg-black text-white hover:bg-red-600 rounded-none px-6 font-mono uppercase tracking-wide">
-                Sobre Nosotros
-              </Button>
             </div>
           </div>
         </section>
@@ -122,12 +125,6 @@ export default function HomePageES() {
                 IPALAC realiza investigaciones de vanguardia sobre relaciones económicas, políticas y culturales entre
                 países asiáticos y latinoamericanos.
               </p>
-              <Link
-                href="/es/research"
-                className="inline-flex items-center text-white font-mono uppercase tracking-wide hover:underline"
-              >
-                Más información <ArrowRight className="h-4 w-4 ml-1" />
-              </Link>
             </div>
             <div className="p-8 md:p-12 bg-yellow-500 text-white">
               <h3 className="text-xl font-mono uppercase tracking-widest mb-4">Diálogo</h3>
@@ -135,12 +132,6 @@ export default function HomePageES() {
                 Creamos plataformas para un intercambio significativo entre formuladores de políticas, líderes
                 empresariales y académicos de ambas regiones.
               </p>
-              <Link
-                href="/es/dialogue"
-                className="inline-flex items-center text-white font-mono uppercase tracking-wide hover:underline"
-              >
-                Más información <ArrowRight className="h-4 w-4 ml-1" />
-              </Link>
             </div>
             <div className="p-8 md:p-12 bg-red-600 text-white">
               <h3 className="text-xl font-mono uppercase tracking-widest mb-4">Comercio</h3>
@@ -148,59 +139,55 @@ export default function HomePageES() {
                 IPALAC facilita el comercio internacional proporcionando información, conexiones y recomendaciones de
                 políticas.
               </p>
-              <Link
-                href="/es/trade"
-                className="inline-flex items-center text-white font-mono uppercase tracking-wide hover:underline"
-              >
-                Más información <ArrowRight className="h-4 w-4 ml-1" />
-              </Link>
             </div>
           </div>
         </section>
 
-        <section className="w-full py-16 md:py-24">
-          <div className="container px-4 md:px-6">
-            <div className="grid grid-cols-12 gap-4 mb-16">
-              <div className="col-span-12 md:col-span-3">
-                <h2 className="text-5xl font-bold tracking-tight uppercase">01</h2>
-              </div>
-              <div className="col-span-12 md:col-span-9">
-                <h3 className="text-2xl font-bold tracking-tight uppercase mb-8">Publicación Destacada</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-4">
-                    <div className="text-xs font-mono uppercase tracking-widest text-neutral-500">LIBRO • 2023</div>
-                    <h4 className="text-xl font-bold">
-                      Retos de la sostenibilidad urbana entre crisis y nuevos paradigmas para la acción
-                    </h4>
-                    <p className="text-neutral-700 text-sm">
-                      Un análisis de los desafíos de sostenibilidad urbana en el contexto de las relaciones
-                      Asia-Latinoamérica, con un enfoque en soluciones innovadoras y colaborativas.
-                    </p>
-                    <Link
-                      href="/es/publications/sostenibilidad-urbana"
-                      className="inline-flex items-center text-black font-mono uppercase tracking-wide hover:text-red-600 text-sm"
-                    >
-                      Leer más <ArrowRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+        {/* Publication section - commented out until we have publications
+<section className="w-full py-16 md:py-24">
+  <div className="container px-4 md:px-6">
+    <div className="grid grid-cols-12 gap-4 mb-16">
+      <div className="col-span-12 md:col-span-3">
+        <h2 className="text-5xl font-bold tracking-tight uppercase">01</h2>
+      </div>
+      <div className="col-span-12 md:col-span-9">
+        <h3 className="text-2xl font-bold tracking-tight uppercase mb-8">Publicación Destacada</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <div className="text-xs font-mono uppercase tracking-widest text-neutral-500">LIBRO • 2023</div>
+            <h4 className="text-xl font-bold">
+              Retos de la sostenibilidad urbana entre crisis y nuevos paradigmas para la acción
+            </h4>
+            <p className="text-neutral-700 text-sm">
+              Un análisis de los desafíos de sostenibilidad urbana en el contexto de las relaciones
+              Asia-Latinoamérica, con un enfoque en soluciones innovadoras y colaborativas.
+            </p>
+            <Link
+              href="/es/publications/sostenibilidad-urbana"
+              className="inline-flex items-center text-black font-mono uppercase tracking-wide hover:text-red-600 text-sm"
+            >
+              Leer más
+            </Link>
           </div>
-        </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+*/}
 
         <section className="w-full py-16 md:py-24 bg-neutral-100">
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-12 gap-4">
               <div className="col-span-12 md:col-span-3">
-                <h2 className="text-5xl font-bold tracking-tight uppercase">02</h2>
+                <h2 className="text-5xl font-bold tracking-tight uppercase">01</h2>
               </div>
               <div className="col-span-12 md:col-span-9">
-                <h3 className="text-2xl font-bold tracking-tight uppercase mb-8">Calculadora de Aranceles</h3>
+                <h3 className="text-2xl font-bold tracking-tight uppercase mb-8">Impacto de los Aranceles de Trump</h3>
                 <p className="text-base md:text-lg mb-6 max-w-3xl">
-                  Utilice nuestra herramienta para calcular las tasas arancelarias efectivas basadas en su ubicación y
-                  destino comercial. Esta calculadora proporciona información valiosa para empresas que operan entre
-                  Asia y América Latina.
+                  Explore nuestra visualización interactiva del impacto de los aranceles propuestos por Trump en el
+                  comercio global. Este mapa muestra la diferencia en las tasas arancelarias antes y después del 10 de
+                  abril de 2025, destacando los cambios significativos para países de todo el mundo.
                 </p>
                 <div className="bg-white p-6 border">
                   <TariffCalculator />

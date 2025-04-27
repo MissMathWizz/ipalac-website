@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Menu } from "lucide-react"
+import { Menu } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
@@ -27,6 +27,9 @@ export default function Home() {
             </SheetTrigger>
             <SheetContent side="right">
               <nav className="flex flex-col gap-4 mt-10">
+                <Link href="/" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
+                  Home
+                </Link>
                 <Link href="/team" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Team
                 </Link>
@@ -43,6 +46,9 @@ export default function Home() {
             </SheetContent>
           </Sheet>
           <nav className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
+              Home
+            </Link>
             <Link href="/team" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Team
             </Link>
@@ -105,9 +111,6 @@ export default function Home() {
                 America, harnessing their complementary strengths to address global challenges and unlock new
                 opportunities.
               </p>
-              <Button className="bg-black text-white hover:bg-red-600 rounded-none px-6 font-mono uppercase tracking-wide">
-                About us
-              </Button>
             </div>
           </div>
         </section>
@@ -120,12 +123,6 @@ export default function Home() {
                 IPALAC conducts cutting-edge research on economic, political, and cultural relations between Asian and
                 Latin American countries.
               </p>
-              <Link
-                href="/research"
-                className="inline-flex items-center text-white font-mono uppercase tracking-wide hover:underline"
-              >
-                Learn more <ArrowRight className="h-4 w-4 ml-1" />
-              </Link>
             </div>
             <div className="p-8 md:p-12 bg-yellow-500 text-white">
               <h3 className="text-xl font-mono uppercase tracking-widest mb-4">Dialogue</h3>
@@ -133,70 +130,61 @@ export default function Home() {
                 We create platforms for meaningful exchange between policymakers, business leaders, and academics from
                 both regions.
               </p>
-              <Link
-                href="/dialogue"
-                className="inline-flex items-center text-white font-mono uppercase tracking-wide hover:underline"
-              >
-                Learn more <ArrowRight className="h-4 w-4 ml-1" />
-              </Link>
             </div>
             <div className="p-8 md:p-12 bg-red-600 text-white">
               <h3 className="text-xl font-mono uppercase tracking-widest mb-4">Trade</h3>
               <p className="text-base mb-6">
                 IPALAC facilitates international trade by providing insights, connections, and policy recommendations.
               </p>
-              <Link
-                href="/trade"
-                className="inline-flex items-center text-white font-mono uppercase tracking-wide hover:underline"
-              >
-                Learn more <ArrowRight className="h-4 w-4 ml-1" />
-              </Link>
             </div>
           </div>
         </section>
 
-        <section className="w-full py-16 md:py-24">
-          <div className="container px-4 md:px-6">
-            <div className="grid grid-cols-12 gap-4 mb-16">
-              <div className="col-span-12 md:col-span-3">
-                <h2 className="text-5xl font-bold tracking-tight uppercase">01</h2>
-              </div>
-              <div className="col-span-12 md:col-span-9">
-                <h3 className="text-2xl font-bold tracking-tight uppercase mb-8">Latest Publications</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-4">
-                    <div className="text-xs font-mono uppercase tracking-widest text-neutral-500">
-                      POLICY BRIEF • MAY 2023
-                    </div>
-                    <h4 className="text-xl font-bold">The New Silk Road: Asia-Latin America Trade Corridors</h4>
-                    <p className="text-neutral-700 text-sm">
-                      An analysis of emerging trade routes and economic corridors connecting Asian and Latin American
-                      markets.
-                    </p>
-                    <Link
-                      href="/publications/silk-road"
-                      className="inline-flex items-center text-black font-mono uppercase tracking-wide hover:text-red-600 text-sm"
-                    >
-                      Read more <ArrowRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
+        {/* Publication section - commented out until we have publications
+<section className="w-full py-16 md:py-24">
+  <div className="container px-4 md:px-6">
+    <div className="grid grid-cols-12 gap-4 mb-16">
+      <div className="col-span-12 md:col-span-3">
+        <h2 className="text-5xl font-bold tracking-tight uppercase">01</h2>
+      </div>
+      <div className="col-span-12 md:col-span-9">
+        <h3 className="text-2xl font-bold tracking-tight uppercase mb-8">Latest Publications</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <div className="text-xs font-mono uppercase tracking-widest text-neutral-500">
+              POLICY BRIEF • MAY 2023
             </div>
+            <h4 className="text-xl font-bold">The New Silk Road: Asia-Latin America Trade Corridors</h4>
+            <p className="text-neutral-700 text-sm">
+              An analysis of emerging trade routes and economic corridors connecting Asian and Latin American
+              markets.
+            </p>
+            <Link
+              href="/publications/silk-road"
+              className="inline-flex items-center text-black font-mono uppercase tracking-wide hover:text-red-600 text-sm"
+            >
+              Read more
+            </Link>
           </div>
-        </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+*/}
 
         <section className="w-full py-16 md:py-24 bg-neutral-100">
           <div className="container px-4 md:px-6">
             <div className="grid grid-cols-12 gap-4">
               <div className="col-span-12 md:col-span-3">
-                <h2 className="text-5xl font-bold tracking-tight uppercase">02</h2>
+                <h2 className="text-5xl font-bold tracking-tight uppercase">01</h2>
               </div>
               <div className="col-span-12 md:col-span-9">
-                <h3 className="text-2xl font-bold tracking-tight uppercase mb-8">Tariff Calculator</h3>
+                <h3 className="text-2xl font-bold tracking-tight uppercase mb-8">Trump Tariff Impact</h3>
                 <p className="text-base md:text-lg mb-6 max-w-3xl">
-                  Use our tool to calculate effective tariff rates based on your location and trade destination. This
-                  calculator provides valuable information for businesses operating between Asia and Latin America.
+                  Explore our interactive visualization of how proposed Trump tariffs would impact trade globally. This
+                  map shows the difference in tariff rates before and after April 10, 2025, highlighting the significant
+                  changes for countries around the world.
                 </p>
                 <div className="bg-white p-6 border">
                   <TariffCalculator />

@@ -26,6 +26,9 @@ export default function TeamPage() {
             </SheetTrigger>
             <SheetContent side="right">
               <nav className="flex flex-col gap-4 mt-10">
+                <Link href="/" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
+                  Home
+                </Link>
                 <Link href="/team" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Team
                 </Link>
@@ -42,6 +45,9 @@ export default function TeamPage() {
             </SheetContent>
           </Sheet>
           <nav className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
+              Home
+            </Link>
             <Link href="/team" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Team
             </Link>
