@@ -1,13 +1,31 @@
-import type React from "react"
-import Plot from "react-plotly.js"
+'use client'
+
+import React, { useEffect, useState } from "react"
+import dynamic from "next/dynamic"
 import { tariffData } from "./tariff-data-service"
 
+// Dynamically import Plotly with SSR disabled
+const Plot = dynamic(() => import("react-plotly.js"), {
+  ssr: false,
+  loading: () => <div className="h-[600px] w-full flex items-center justify-center">Cargando visualización...</div>
+})
+
 const TariffMapES: React.FC = () => {
+  const [isMounted, setIsMounted] = useState(false)
+  
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
   const customColorscale = [
     [0, "#90A959"], // Verde (bajo)
     [0.5, "#F4BF75"], // Amarillo (medio)
     [1, "#D95B43"], // Rojo (alto)
   ]
+
+  if (!isMounted) {
+    return <div className="h-[600px] w-full flex items-center justify-center">Cargando visualización...</div>
+  }
 
   return (
     <div style={{ backgroundColor: "#f9f4ef", padding: "1rem" }}>
@@ -42,7 +60,11 @@ const TariffMapES: React.FC = () => {
           paper_bgcolor: "#f9f4ef",
           plot_bgcolor: "#f9f4ef",
           margin: { l: 0, r: 0, t: 30, b: 0 },
+          autosize: true,
+          responsive: true,
         }}
+        style={{ width: '100%', height: '100%' }}
+        useResizeHandler={true}
       />
     </div>
   )
