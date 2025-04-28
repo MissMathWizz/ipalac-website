@@ -80,11 +80,11 @@ const TariffMap: React.FC = () => {
               showframe: false,
               showcoastlines: true,
               projection: {
-                type: "equirectangular",
+                type: "mercator",
                 scale: isMobile ? 2 : 2, // Much larger scale on mobile
               },
               domain: {
-                x: isMobile ? [0, 2] : [0, 4], // Give much more space to the legend on mobile
+                x: isMobile ? [0, 0.85] : [0, 0.85], // Give much more space to the legend on mobile
                 y: [0, 1],
               },
               center: {
@@ -93,7 +93,7 @@ const TariffMap: React.FC = () => {
               },
             },
             autosize: true,
-            height: isMobile ? 400 : 400, // Much taller on mobile
+            height: isMobile ? 500 : 600, // Much taller on mobile
             width: null, // Let it be responsive
             paper_bgcolor: "#f9f4ef",
             plot_bgcolor: "#f9f4ef",
