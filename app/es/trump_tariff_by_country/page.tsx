@@ -109,14 +109,14 @@ export default function TariffDataPageES() {
           </div>
         </section>
 
-        <section className="w-full py-8 md:py-24 bg-neutral-100">
-          <div className="container px-2 md:px-6">
-            <div className="bg-white p-2 md:p-4 border rounded-md overflow-hidden">
+        <section className="w-full py-4 md:py-24 bg-neutral-100">
+          <div className="container px-0 md:px-6">
+            <div className="bg-white border overflow-hidden">
               <div className="mx-auto">
                 <TariffCalculator />
               </div>
             </div>
-            <div className="mt-8 space-y-6">
+            <div className="mt-8 px-4 space-y-6">
               <h3 className="text-2xl font-bold">Entendiendo los Datos</h3>
               <p className="text-base md:text-lg">
                 La visualización anterior muestra la diferencia entre las tasas arancelarias actuales y las tasas
