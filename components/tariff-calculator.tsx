@@ -40,7 +40,7 @@ const TariffMap: React.FC = () => {
   return (
     <div className="w-full overflow-hidden bg-[#f9f4ef] p-2">
       <h2 className="text-center text-lg font-bold mb-2 text-gray-800">Tariff Difference After April 10, 2025</h2>
-      <div className="w-full overflow-hidden" style={{ maxHeight: isMobile ? "700px" : "500px" }}>
+      <div className="w-full overflow-hidden" style={{ maxHeight: isMobile ? "1800px" : "500px" }}>
         <Plot
           data={[
             {
@@ -84,7 +84,7 @@ const TariffMap: React.FC = () => {
                 scale: isMobile ? 1.1 : 1.1, // Much larger scale on mobile
               },
               domain: {
-                x: isMobile ? [0, 0.65] : [0, 0.85], // Give much more space to the legend on mobile
+                x: isMobile ? [0, 0.85] : [0, 0.85], // Give much more space to the legend on mobile
                 y: [0, 1],
               },
               center: {
