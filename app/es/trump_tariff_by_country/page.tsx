@@ -159,7 +159,7 @@ export default function TariffDataPageES() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-xs font-mono uppercase tracking-widest text-neutral-500">
-              © 2023 Instituto para la Cooperación Asia-Latinoamérica
+              © 2024 Instituto para la Cooperación Asia-Latinoamérica
             </div>
             <div className="flex gap-6">
               <Link

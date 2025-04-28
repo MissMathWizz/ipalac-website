@@ -267,7 +267,7 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-xs font-mono uppercase tracking-widest text-neutral-500">
-              © 2023 Institute for Pan Asia-Latin America Cooperation
+              © 2024 Institute for Pan Asia-Latin America Cooperation
             </div>
             <div className="flex gap-6">
               <Link

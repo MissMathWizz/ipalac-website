@@ -57,15 +57,16 @@ const TariffMap: React.FC = () => {
               colorscale: customColorscale,
               colorbar: {
                 title: "Tariff Diff",
-                thickness: isMobile ? 30 : 10, // Much thicker on mobile (30px instead of 20px)
-                len: isMobile ? 0.8 : 0.5, // Much longer on mobile (80% of height)
+                thickness: isMobile ? 30 : 10, // Much thicker on mobile
+                len: isMobile ? 0.8 : 0.8, // Make desktop legend taller too (changed from 0.5 to 0.8)
                 y: 0.5, // Center vertically
                 yanchor: "middle",
                 titleside: "right",
                 outlinewidth: 0,
                 tickformat: ".1f",
-                titlefont: { size: isMobile ? 18 : 12 }, // Much larger font on mobile
-                tickfont: { size: isMobile ? 16 : 10 }, // Much larger font on mobile
+                dtick: 0.1, // Add this line to set tick intervals to 0.1
+                titlefont: { size: isMobile ? 18 : 12 },
+                tickfont: { size: isMobile ? 16 : 10 },
               },
               marker: {
                 line: {
