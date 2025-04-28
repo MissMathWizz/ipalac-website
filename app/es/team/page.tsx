@@ -29,6 +29,9 @@ export default function TeamPageES() {
                 <Link href="/es" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Inicio
                 </Link>
+                <Link href="/es/data" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
+                  Datos
+                </Link>
                 <Link href="/es/team" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Equipo
                 </Link>
@@ -47,6 +50,9 @@ export default function TeamPageES() {
           <nav className="hidden md:flex items-center gap-8">
             <Link href="/es" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Inicio
+            </Link>
+            <Link href="/es/data" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
+              Datos
             </Link>
             <Link href="/es/team" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Equipo

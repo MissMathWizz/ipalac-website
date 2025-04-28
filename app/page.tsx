@@ -30,6 +30,9 @@ export default function Home() {
                 <Link href="/" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Home
                 </Link>
+                <Link href="/data" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
+                  Data
+                </Link>
                 <Link href="/team" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Team
                 </Link>
@@ -48,6 +51,9 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-8">
             <Link href="/" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Home
+            </Link>
+            <Link href="/data" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
+              Data
             </Link>
             <Link href="/team" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Team
@@ -186,7 +192,7 @@ export default function Home() {
                   map shows the difference in tariff rates before and after April 10, 2025, highlighting the significant
                   changes for countries around the world.
                 </p>
-                <div className="bg-white p-6 border">
+                <div className="bg-white p-4 border overflow-hidden">
                   <TariffCalculator />
                 </div>
               </div>

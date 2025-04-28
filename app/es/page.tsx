@@ -30,6 +30,9 @@ export default function HomePageES() {
                 <Link href="/es" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Inicio
                 </Link>
+                <Link href="/es/data" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
+                  Datos
+                </Link>
                 <Link href="/es/team" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Equipo
                 </Link>
@@ -48,6 +51,9 @@ export default function HomePageES() {
           <nav className="hidden md:flex items-center gap-8">
             <Link href="/es" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Inicio
+            </Link>
+            <Link href="/es/data" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
+              Datos
             </Link>
             <Link href="/es/team" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Equipo
@@ -189,7 +195,7 @@ export default function HomePageES() {
                   comercio global. Este mapa muestra la diferencia en las tasas arancelarias antes y después del 10 de
                   abril de 2025, destacando los cambios significativos para países de todo el mundo.
                 </p>
-                <div className="bg-white p-6 border">
+                <div className="bg-white p-4 border overflow-hidden">
                   <TariffCalculator />
                 </div>
               </div>
