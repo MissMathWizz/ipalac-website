@@ -42,7 +42,7 @@ const TariffMapES: React.FC = () => {
       <h2 className="text-center text-lg font-bold mb-2 text-gray-800">
         Diferencia Arancelaria Después del 10 de Abril de 2025
       </h2>
-      <div className="w-full overflow-hidden" style={{ maxHeight: isMobile ? "600px" : "500px" }}>
+      <div className="w-full overflow-hidden" style={{ maxHeight: isMobile ? "700px" : "500px" }}>
         <Plot
           data={[
             {
@@ -59,15 +59,15 @@ const TariffMapES: React.FC = () => {
               colorscale: customColorscale,
               colorbar: {
                 title: "Dif. Arancelaria",
-                thickness: isMobile ? 20 : 10, // Much thicker on mobile
-                len: isMobile ? 0.7 : 0.5, // Longer on mobile
+                thickness: isMobile ? 30 : 10, // Much thicker on mobile (30px instead of 20px)
+                len: isMobile ? 0.8 : 0.5, // Much longer on mobile (80% of height)
                 y: 0.5, // Center vertically
                 yanchor: "middle",
                 titleside: "right",
                 outlinewidth: 0,
                 tickformat: ".1f",
-                titlefont: { size: isMobile ? 16 : 12 }, // Larger font on mobile
-                tickfont: { size: isMobile ? 14 : 10 }, // Larger font on mobile
+                titlefont: { size: isMobile ? 18 : 12 }, // Much larger font on mobile
+                tickfont: { size: isMobile ? 16 : 10 }, // Much larger font on mobile
               },
               marker: {
                 line: {
@@ -83,10 +83,10 @@ const TariffMapES: React.FC = () => {
               showcoastlines: true,
               projection: {
                 type: "equirectangular",
-                scale: isMobile ? 1.0 : 1.1, // Smaller scale on mobile to fit more of the map
+                scale: isMobile ? 1.8 : 1.1, // Much larger scale on mobile
               },
               domain: {
-                x: isMobile ? [0, 0.75] : [0, 0.85], // Give more space to the legend on mobile
+                x: isMobile ? [0, 0.65] : [0, 0.85], // Give much more space to the legend on mobile
                 y: [0, 1],
               },
               center: {
@@ -95,7 +95,7 @@ const TariffMapES: React.FC = () => {
               },
             },
             autosize: true,
-            height: isMobile ? 550 : 400, // Much taller on mobile
+            height: isMobile ? 650 : 400, // Much taller on mobile
             width: null, // Let it be responsive
             paper_bgcolor: "#f9f4ef",
             plot_bgcolor: "#f9f4ef",
