@@ -201,7 +201,7 @@ export default function HomePageES() {
                   comercio global. Este mapa muestra la diferencia en las tasas arancelarias antes y después del 10 de
                   abril de 2025, destacando los cambios significativos para países de todo el mundo.
                 </p>
-                <div className="bg-white p-4 border overflow-hidden">
+                <div className="bg-white p-2 sm:p-4 border overflow-hidden">
                   <div className="max-w-4xl mx-auto">
                     <TariffCalculator />
                   </div>

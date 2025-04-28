@@ -198,7 +198,7 @@ export default function Home() {
                   map shows the difference in tariff rates before and after April 10, 2025, highlighting the significant
                   changes for countries around the world.
                 </p>
-                <div className="bg-white p-4 border overflow-hidden">
+                <div className="bg-white p-2 sm:p-4 border overflow-hidden">
                   <div className="max-w-4xl mx-auto">
                     <TariffCalculator />
                   </div>

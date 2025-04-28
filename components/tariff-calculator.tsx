@@ -29,8 +29,10 @@ const TariffMap: React.FC = () => {
   }
 
   return (
-    <div className="w-full overflow-hidden bg-[#f9f4ef] p-4">
-      <h2 className="text-center text-lg font-bold mb-4 text-gray-800">Tariff Difference After April 10, 2025</h2>
+    <div className="w-full overflow-hidden bg-[#f9f4ef] p-2 sm:p-4">
+      <h2 className="text-center text-lg font-bold mb-2 sm:mb-4 text-gray-800">
+        Tariff Difference After April 10, 2025
+      </h2>
       <div className="w-full overflow-hidden">
         <Plot
           data={[
@@ -48,13 +50,15 @@ const TariffMap: React.FC = () => {
               colorscale: customColorscale,
               colorbar: {
                 title: "Tariff Diff",
-                thickness: 10, // Reduced from 15
-                len: 0.5, // Set to 50% of the height
+                thickness: 8, // Further reduced for mobile
+                len: 0.4, // Shorter colorbar
                 y: 0.5, // Center vertically
                 yanchor: "middle",
                 titleside: "right",
                 outlinewidth: 0,
                 tickformat: ".1f",
+                titlefont: { size: 10 }, // Smaller title font
+                tickfont: { size: 9 }, // Smaller tick font
               },
               marker: {
                 line: {
@@ -70,18 +74,18 @@ const TariffMap: React.FC = () => {
               showcoastlines: true,
               projection: {
                 type: "equirectangular",
-                scale: 1.1, // Slightly increased scale to make map more prominent
+                scale: 1.2, // Increased scale for mobile
               },
               domain: {
-                x: [0, 0.85], // Give more space to the map
+                x: [0, 0.82], // Adjusted to give more space to the map
                 y: [0, 1],
               },
             },
             autosize: true,
-            height: 400,
+            height: 350, // Reduced height on mobile
             paper_bgcolor: "#f9f4ef",
             plot_bgcolor: "#f9f4ef",
-            margin: { l: 0, r: 0, t: 10, b: 0 },
+            margin: { l: 0, r: 0, t: 0, b: 0 }, // Removed top margin
             responsive: true,
           }}
           style={{ width: "100%", height: "100%" }}
