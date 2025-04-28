@@ -83,7 +83,7 @@ const TariffMapES: React.FC = () => {
               showcoastlines: true,
               projection: {
                 type: "mercator",
-                scale: isMobile ? 1.6 : 1.1, // Much larger scale on mobile
+                scale: isMobile ? 3: 3, // Much larger scale on mobile
               },
               domain: {
                 x: isMobile ? [0, 0.99] : [0, 0.85], // Give much more space to the legend on mobile
@@ -95,7 +95,7 @@ const TariffMapES: React.FC = () => {
               },
             },
             autosize: true,
-            height: isMobile ? 650 : 400, // Much taller on mobile
+            height: isMobile ? 400 : 650, // Much taller on mobile
             width: null, // Let it be responsive
             paper_bgcolor: "#f9f4ef",
             plot_bgcolor: "#f9f4ef",
