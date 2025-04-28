@@ -109,10 +109,10 @@ export default function TariffDataPage() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 bg-neutral-100">
-          <div className="container px-4 md:px-6">
-            <div className="bg-white p-3 sm:p-6 border rounded-md overflow-hidden">
-              <div className="max-w-5xl mx-auto">
+        <section className="w-full py-8 md:py-24 bg-neutral-100">
+          <div className="container px-2 md:px-6">
+            <div className="bg-white p-2 md:p-4 border rounded-md overflow-hidden">
+              <div className="mx-auto">
                 <TariffCalculator />
               </div>
             </div>

@@ -189,7 +189,7 @@ export default function HomePageES() {
 */}
 
         <section className="w-full py-16 md:py-24 bg-neutral-100">
-          <div className="container px-4 md:px-6">
+          <div className="container px-2 md:px-6">
             <div className="grid grid-cols-12 gap-4">
               <div className="col-span-12 md:col-span-3">
                 <h2 className="text-5xl font-bold tracking-tight uppercase">01</h2>
@@ -201,8 +201,8 @@ export default function HomePageES() {
                   comercio global. Este mapa muestra la diferencia en las tasas arancelarias antes y después del 10 de
                   abril de 2025, destacando los cambios significativos para países de todo el mundo.
                 </p>
-                <div className="bg-white p-2 sm:p-4 border overflow-hidden">
-                  <div className="max-w-4xl mx-auto">
+                <div className="bg-white p-2 md:p-4 border overflow-hidden">
+                  <div className="mx-auto">
                     <TariffCalculator />
                   </div>
                 </div>
