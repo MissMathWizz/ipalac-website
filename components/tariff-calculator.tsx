@@ -84,7 +84,7 @@ const TariffMap: React.FC = () => {
                 scale: isMobile ? 2 : 2, // Much larger scale on mobile
               },
               domain: {
-                x: isMobile ? [0, 1] : [0, 0.85], // Give much more space to the legend on mobile
+                x: isMobile ? [0, 0.4] : [0, 0.4], // Give much more space to the legend on mobile
                 y: [0, 1],
               },
               center: {
