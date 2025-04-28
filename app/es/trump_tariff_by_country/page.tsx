@@ -29,18 +29,27 @@ export default function TariffDataPageES() {
                 <Link href="/es" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Inicio
                 </Link>
-                <Link href="/es/data" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
+                <Link
+                  href="/es/trump_tariff_by_country"
+                  className="text-lg font-mono uppercase tracking-wide hover:text-red-600"
+                >
                   Datos
                 </Link>
                 <Link href="/es/team" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Equipo
                 </Link>
                 <div className="flex gap-4 mt-4">
-                  <Link href="/es/data" className="text-sm font-mono uppercase tracking-wide hover:text-red-600">
+                  <Link
+                    href="/es/trump_tariff_by_country"
+                    className="text-sm font-mono uppercase tracking-wide hover:text-red-600"
+                  >
                     ES
                   </Link>
                   <span>|</span>
-                  <Link href="/data" className="text-sm font-mono uppercase tracking-wide hover:text-red-600">
+                  <Link
+                    href="/trump_tariff_by_country"
+                    className="text-sm font-mono uppercase tracking-wide hover:text-red-600"
+                  >
                     EN
                   </Link>
                 </div>
@@ -51,18 +60,27 @@ export default function TariffDataPageES() {
             <Link href="/es" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Inicio
             </Link>
-            <Link href="/es/data" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
+            <Link
+              href="/es/trump_tariff_by_country"
+              className="text-base font-mono uppercase tracking-wide hover:text-red-600"
+            >
               Datos
             </Link>
             <Link href="/es/team" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Equipo
             </Link>
             <div className="flex gap-2 ml-4">
-              <Link href="/es/data" className="text-sm font-mono uppercase tracking-wide font-bold hover:text-red-600">
+              <Link
+                href="/es/trump_tariff_by_country"
+                className="text-sm font-mono uppercase tracking-wide font-bold hover:text-red-600"
+              >
                 ES
               </Link>
               <span>|</span>
-              <Link href="/data" className="text-sm font-mono uppercase tracking-wide hover:text-red-600">
+              <Link
+                href="/trump_tariff_by_country"
+                className="text-sm font-mono uppercase tracking-wide hover:text-red-600"
+              >
                 EN
               </Link>
             </div>
@@ -94,7 +112,9 @@ export default function TariffDataPageES() {
         <section className="w-full py-12 md:py-24 bg-neutral-100">
           <div className="container px-4 md:px-6">
             <div className="bg-white p-6 border rounded-md overflow-hidden">
-              <TariffCalculator />
+              <div className="max-w-5xl mx-auto">
+                <TariffCalculator />
+              </div>
             </div>
             <div className="mt-8 space-y-6">
               <h3 className="text-2xl font-bold">Entendiendo los Datos</h3>

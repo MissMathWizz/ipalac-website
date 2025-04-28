@@ -29,7 +29,10 @@ export default function TeamPage() {
                 <Link href="/" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Home
                 </Link>
-                <Link href="/data" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
+                <Link
+                  href="/trump_tariff_by_country"
+                  className="text-lg font-mono uppercase tracking-wide hover:text-red-600"
+                >
                   Data
                 </Link>
                 <Link href="/team" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
@@ -51,7 +54,10 @@ export default function TeamPage() {
             <Link href="/" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Home
             </Link>
-            <Link href="/data" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
+            <Link
+              href="/trump_tariff_by_country"
+              className="text-base font-mono uppercase tracking-wide hover:text-red-600"
+            >
               Data
             </Link>
             <Link href="/team" className="text-base font-mono uppercase tracking-wide hover:text-red-600">

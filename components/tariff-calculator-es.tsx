@@ -50,7 +50,13 @@ const TariffMapES: React.FC = () => {
               colorscale: customColorscale,
               colorbar: {
                 title: "Dif. Arancelaria",
-                thickness: 15,
+                thickness: 10, // Reduced from 15
+                len: 0.5, // Set to 50% of the height
+                y: 0.5, // Center vertically
+                yanchor: "middle",
+                titleside: "right",
+                outlinewidth: 0,
+                tickformat: ".1f",
               },
               marker: {
                 line: {
@@ -66,7 +72,11 @@ const TariffMapES: React.FC = () => {
               showcoastlines: true,
               projection: {
                 type: "equirectangular",
-                scale: 1,
+                scale: 1.1, // Slightly increased scale to make map more prominent
+              },
+              domain: {
+                x: [0, 0.85], // Give more space to the map
+                y: [0, 1],
               },
             },
             autosize: true,

@@ -29,7 +29,10 @@ export default function TeamPageES() {
                 <Link href="/es" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Inicio
                 </Link>
-                <Link href="/es/data" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
+                <Link
+                  href="/es/trump_tariff_by_country"
+                  className="text-lg font-mono uppercase tracking-wide hover:text-red-600"
+                >
                   Datos
                 </Link>
                 <Link href="/es/team" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
@@ -51,7 +54,10 @@ export default function TeamPageES() {
             <Link href="/es" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Inicio
             </Link>
-            <Link href="/es/data" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
+            <Link
+              href="/es/trump_tariff_by_country"
+              className="text-base font-mono uppercase tracking-wide hover:text-red-600"
+            >
               Datos
             </Link>
             <Link href="/es/team" className="text-base font-mono uppercase tracking-wide hover:text-red-600">

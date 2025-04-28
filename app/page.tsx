@@ -30,7 +30,10 @@ export default function Home() {
                 <Link href="/" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
                   Home
                 </Link>
-                <Link href="/data" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
+                <Link
+                  href="/trump_tariff_by_country"
+                  className="text-lg font-mono uppercase tracking-wide hover:text-red-600"
+                >
                   Data
                 </Link>
                 <Link href="/team" className="text-lg font-mono uppercase tracking-wide hover:text-red-600">
@@ -52,7 +55,10 @@ export default function Home() {
             <Link href="/" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
               Home
             </Link>
-            <Link href="/data" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
+            <Link
+              href="/trump_tariff_by_country"
+              className="text-base font-mono uppercase tracking-wide hover:text-red-600"
+            >
               Data
             </Link>
             <Link href="/team" className="text-base font-mono uppercase tracking-wide hover:text-red-600">
@@ -193,7 +199,9 @@ export default function Home() {
                   changes for countries around the world.
                 </p>
                 <div className="bg-white p-4 border overflow-hidden">
-                  <TariffCalculator />
+                  <div className="max-w-4xl mx-auto">
+                    <TariffCalculator />
+                  </div>
                 </div>
               </div>
             </div>
