@@ -83,7 +83,7 @@ const TariffMapES: React.FC = () => {
               showcoastlines: true,
               projection: {
                 type: "equirectangular",
-                scale: isMobile ? 1.2 : 1.1, // Much larger scale on mobile
+                scale: isMobile ? 1.6 : 1.1, // Much larger scale on mobile
               },
               domain: {
                 x: isMobile ? [0, 0.65] : [0, 0.85], // Give much more space to the legend on mobile
